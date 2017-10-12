@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">AmberCard</string>
+    <string name="json_one">
+{
+            "id": 26,
+            "name": "ЮБИЛЕЙНЫЙ МОСТ",
+            "category_id": [
+                {
+                    "id": 5,
+                    "name": "Маршрут \"Места для поцелуев\"",
+                    "icon": "/media/depositphotos_115049264-stock-illustration-couple-in-love-sketch-icon.jpg",
+                    "picture": "/media/route_kissing_places.jpg"
+                }
+            ],
+            "description": "Юбилейный мост — пешеходный разводной мост через реку Преголю в Калининграде. Мост назван так потому что его открытие, состоявшееся 1 июля 2005 года, было приурочено к 750-летнему юбилею города. Мост соедняет улицы Октябрьская и Эпроновская. Мост входит в состав комплекса Рыбная деревня. Автор проекта моста — архитектор Александр Башин.\r\nМост построен на опорах разрушенного во время войны Императорского моста.",
+            "description_2": "",
+            "latitude": 54.702407,
+            "longitude": 20.51451,
+            "rate": "5",
+            "cost_sum": "",
+            "cost_text": "",
+            "phone": "",
+            "site": "",
+            "discount_min": "0",
+            "discount_max": "0",
+            "discount_conditions": "Мост бесплатен для посещения",
+            "min_people": null,
+            "max_people": null,
+            "photos": [
+                "/media/jubelee_brigde.jpg"
+            ]
+}
+    </string>
+    <string name="json_two">
+"{
+            "id": 1,
+            "name": "МУЗЕЙ-КВАРТИРА ALTES HAUS — HUFEN",
+            "category_id": [
+                {
+                    "id": 1,
+                    "name": "Музеи",
+                    "icon": "/media/ic_museum.png",
+                    "picture": "/media/unnamed.jpg"
+                }
+            ],
+            "description": "Музей показывает обстановку семейного быта семьи Густава Гросманна, купца и владельца продовольственного магазина и рассказывает историю городского района Хуфен. Здание на Шрёттерштрассе 11-13 было построено в 1912 году под доходный дом.\r\n\r\nМы вместе прогуляемся по району Хуфен, узнаем историю доходных домов по улице Шрётерштрассе, где расположен дом герра Гроссмана, рассмотрим предметы мужского обихода: головные уборы, обувь, курительные трубки и аксессуары для курения, костюмы той эпохи. Загляните в Altes Haus — Hufen, чтобы увидеть, чем жили мужчины Кёнигсберга на рубеже XIX и ХХ веков.\r\n\r\nКвартира используется как место для встреч, интересных собраний, лекций и, конечно же, экскурсий.",
+            "description_2": "Экскурсии с понедельника по субботу в  11.00, 13.00 и 15.00. Продолжительность экскурсии — 1-1,5 ч.",
+            "latitude": 54.722104,
+            "longitude": 20.474408,
+            "rate": "5",
+            "cost_sum": "300",
+            "cost_text": "Стоимость входного билета",
+            "phone": "+7 (4012) 33 50 60",
+            "site": "http://alteshaus.ru/",
+            "discount_min": "10",
+            "discount_max": "10",
+            "discount_conditions": "Скидка на входной билет и на поездки, организованные музеем",
+            "min_people": 1,
+            "max_people": null,
+            "photos": [
+                "/media/alterhaus_01.jpg",
+                "/media/alterhaus_02.jpg",
+                "/media/alterhaus_03.jpg",
+                "/media/alterhaus_04.jpg",
+                "/media/alterhaus_05.jpg"
+            ]
+}"
+    </string>
+    <string name="action_settings">Settings</string>
+</resources>

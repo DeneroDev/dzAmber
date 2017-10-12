@@ -1,12 +1,11 @@
-package com.example.denero.ambercard.model;
+package com.example.denero.ambercard.model
 
 /**
- * Created by DENERO on 11.10.2017.
+ * Created by DENERO on 12.10.2017.
  */
-
-public class JsonGet {
-    public String getJsonOne(){
-        return "{\n" +
+class JsonGet {
+    val jsonOne: String
+        get() = "{\n" +
                 "            \"id\": 26,\n" +
                 "            \"name\": \"ЮБИЛЕЙНЫЙ МОСТ\",\n" +
                 "            \"category_id\": [\n" +
@@ -34,10 +33,9 @@ public class JsonGet {
                 "            \"photos\": [\n" +
                 "                \"/media/jubelee_brigde.jpg\"\n" +
                 "            ]\n" +
-                "}\n";
-    }
-    public String getJsonTwo(){
-        return "{\n" +
+                "}\n"
+    val jsonTwo: String
+        get() = "{\n" +
                 "            \"id\": 1,\n" +
                 "            \"name\": \"МУЗЕЙ-КВАРТИРА ALTES HAUS — HUFEN\",\n" +
                 "            \"category_id\": [\n" +
@@ -69,6 +67,5 @@ public class JsonGet {
                 "                \"/media/alterhaus_04.jpg\",\n" +
                 "                \"/media/alterhaus_05.jpg\"\n" +
                 "            ]\n" +
-                "}\n";
-    }
+                "}\n"
 }

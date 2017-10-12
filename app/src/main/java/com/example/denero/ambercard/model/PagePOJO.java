@@ -121,7 +121,7 @@ public class PagePOJO {
     public String getRate() {
         return rate;
     }
-    ///sadas
+    ///sadaszxcz
 
     public void setRate(String rate) {
         this.rate = rate;

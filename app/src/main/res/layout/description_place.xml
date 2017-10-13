@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--TODO: Скругление не соответсвует-->
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,12 +7,16 @@
 
     <include layout="@layout/category_layout"/>
 
+    <!--TODO: Фиксированный отступ, когда верхний блок не имеет фиксированной высоты. Рискуешь наложениями-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="50dp">
 
+        <!--TODO: Используешь android:text для того, чтобы видеть что верстаешь? исползуй tools:text-->
+        <!--TODO: Цвет не соответсвует-->
+        <!--TODO: marginStart-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

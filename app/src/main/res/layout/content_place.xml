@@ -4,19 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="-25dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.denero.ambercard.PlaceActivity"
-    tools:showIn="@layout/activity_place"
-    android:layout_marginTop="-25dp">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    tools:showIn="@layout/activity_place">
 
-    <include layout="@layout/description_place"/>
-    <include layout="@layout/telephone_number_place"/>
-    <include layout="@layout/location_place"/>
-</LinearLayout>
+    <!--Constraint спас бы от вложенности и многие ситуации более красиво решились-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--TODO: В целом include бесполезны, в нескольких из них не исползуются merge и layout-->
+        <!--TODO: Не используются стили текста-->
+
+        <include layout="@layout/description_place" />
+
+        <!--TODO: Где резделители?-->
+        <include layout="@layout/telephone_number_place" />
+        <include layout="@layout/location_place" />
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

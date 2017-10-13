@@ -8,6 +8,7 @@
     tools:context="com.example.denero.ambercard.PlaceActivity"
     >
 
+    <!--TODO: Контент должен лежать под аппбаром, тогда сработает наложение, чтобы добиться скругления-->
     <include layout="@layout/content_place" />
 
     <android.support.design.widget.AppBarLayout

@@ -22,17 +22,30 @@ import java.util.*
  * Created by DENERO on 12.10.2017.
  */
 class PlaceActivity : AppCompatActivity() {
+
+    // Вынести всё по слоям, использовав, например MVP подход или любой другой
+
+
     private val jsonGet = JsonGet()
     private val BASE_URL = "http://138.68.68.166:9999"
     private val ID_STAR = intArrayOf(R.id.star_one, R.id.star_two, R.id.star_three, R.id.star_four, R.id.star_five)
+
+    // Тут должен быть lateinit, а не optional
     private var YESEVA_ONE: Typeface? = null
+
     private val builder = GsonBuilder()
     private val gson = builder.create()
     private val page = gson.fromJson<PagePOJO>(jsonGet.jsonTwo, PagePOJO::class.java!!)
+
+    // TODO: В gradle стоит minApi 19, здесь ты требуешь 21. На девайсах меньше 21 будет краш т.к. этот метод они не найдут. Это баг категории blocker - наивысший
+    // Возникли проблемы с getDrawable()? Почитай про Support Library, да и в целом про то, почему все ненавидят старые андроиды.
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_place)
+
+        // Метод сильно перегружен, если нет архитектурных слоёв, то хотя бы разнеси всё на функции
+
         title = ""
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         val collapsingToolbarLayout = findViewById(R.id.toolbar_layout) as CollapsingToolbarLayout
@@ -52,9 +65,12 @@ class PlaceActivity : AppCompatActivity() {
 
 
         runOnUiThread {
+            // Я бы вынес в extension к ImageView
             Picasso.with(applicationContext) //передаем контекст приложения
                     .load(BASE_URL + page!!.categoryId!![0].picture) //адрес изображения
                     .into(toolbarImg) //ссылка на ImageView
+            // упрости
+            // (0 until Integer.valueOf(page.rate)).forEach {  }
             for (i in 0 until Integer.valueOf(page.rate)) {
                 val star = findViewById(ID_STAR[i]) as ImageView
                 star.setImageDrawable(getDrawable(R.drawable.ic_star_plus))
@@ -68,6 +84,7 @@ class PlaceActivity : AppCompatActivity() {
         if (page.description2 != null && page!!.description2!!.length >= 2)
             descrWorkDay.text = Html.fromHtml("<b>" + "Режим работы:" + "</b> " + page.description2)
         else {
+            // Всё это заменятся на View.GONE
             descrWorkDay.width = 0
             descrWorkDay.height = 0
             descrWorkDay.visibility = View.INVISIBLE
@@ -89,6 +106,7 @@ class PlaceActivity : AppCompatActivity() {
         }
 
         if (page.longitude != null && page!!.phone!!.length > 1) {
+            // Используй строки с плейсхолдерами
             descrPlace.text = "Долгота:" + String.format(Locale.ENGLISH, "%(.2f", page.longitude) + " | " + "Широта:" + String.format(Locale.ENGLISH, "%(.2f", page.latitude)
         } else {
             val card = findViewById(R.id.locale_card) as CardView
@@ -99,6 +117,7 @@ class PlaceActivity : AppCompatActivity() {
 
     }
 
+    // Зачем v: View
     fun endApplication(v: View) {
         finish()
     }

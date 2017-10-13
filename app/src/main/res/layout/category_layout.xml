@@ -11,6 +11,7 @@
         android:layout_height="24dp"
         android:src="@mipmap/ic_museum" />
 
+    <!--TODO: Длинная строка сдвинет звёзды за экран-->
     <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -20,10 +21,14 @@
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textSize="16sp" />
+
+    <!--TODO: TextView для текста, Space чтобы занять место-->
+    <!--TODO: А ещё android:layout_width="0"-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_weight="1"
         android:layout_height="wrap_content" />
+    <!--Лучше заменить на RateBar или свою вьюшку-->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

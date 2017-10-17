@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.denero.ambercard.PlaceActivity"
+    tools:context="com.example.denero.ambercard.View.PlaceActivity"
+    android:background="@android:color/transparent"
     >
-
-    <include layout="@layout/content_place" />
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -16,6 +15,8 @@
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
+
+
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
@@ -48,6 +49,8 @@
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/content_place" />
+
 
 
 </android.support.design.widget.CoordinatorLayout>

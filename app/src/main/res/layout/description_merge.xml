@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="Заголовок"
+        android:id="@+id/title_description"
+        android:textStyle="bold"
+        style="@style/title_text"
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Описание"
+        style="@style/main_text"
+        android:id="@+id/text_description"
+        android:typeface="sans"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:textSize="17sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Режим работы:"
+        style="@style/main_text"
+        android:id="@+id/workday_description"
+        android:typeface="sans"
+        android:layout_marginLeft="@dimen/object_margin_left"
+        android:layout_marginRight="24dp"
+        android:textSize="17sp"
+        android:layout_marginTop="@dimen/object_margin_top"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price_description"
+        style="@style/main_text"
+        android:typeface="sans"
+        android:textSize="17sp"
+        android:layout_marginLeft="@dimen/object_margin_left"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="@dimen/object_margin_top"/>
+</merge>

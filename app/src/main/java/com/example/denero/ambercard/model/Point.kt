@@ -3,62 +3,64 @@ package com.example.denero.ambercard.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
+
+
 /**
- * Created by DENERO on 12.10.2017.
+ * Created by DENERO on 16.10.2017.
  */
-class PagePOJO {
+class Point {
     @SerializedName("id")
     @Expose
-    var id: Int? = null
+    private val id: Int? = null
     @SerializedName("name")
     @Expose
-    var name: String? = null
+    private val name: String? = null
     @SerializedName("category_id")
     @Expose
-    var categoryId: List<Int>? = null
+    private val categoryId: List<Int>? = null
     @SerializedName("description")
     @Expose
-    var description: String? = null
+    private val description: String? = null
     @SerializedName("description_2")
     @Expose
-    var description2: String? = null
+    private val description2: String? = null
     @SerializedName("latitude")
     @Expose
-    var latitude: Double? = null
+    private val latitude: Double? = null
     @SerializedName("longitude")
     @Expose
-    var longitude: Double? = null
+    private val longitude: Double? = null
     @SerializedName("rate")
     @Expose
-    var rate: String? = null
+    private val rate: String? = null
     @SerializedName("cost_sum")
     @Expose
-    var costSum: String? = null
+    private val costSum: String? = null
     @SerializedName("cost_text")
     @Expose
-    var costText: String? = null
+    private val costText: String? = null
     @SerializedName("phone")
     @Expose
-    var phone: String? = null
+    private val phone: String? = null
     @SerializedName("site")
     @Expose
-    var site: String? = null
+    private val site: String? = null
     @SerializedName("discount_min")
     @Expose
-    var discountMin: String? = null
+    private val discountMin: String? = null
     @SerializedName("discount_max")
     @Expose
-    var discountMax: String? = null
+    private val discountMax: String? = null
     @SerializedName("discount_conditions")
     @Expose
-    var discountConditions: String? = null
+    private val discountConditions: String? = null
     @SerializedName("min_people")
     @Expose
-    var minPeople: Int? = null
+    private val minPeople: Int? = null
     @SerializedName("max_people")
     @Expose
-    var maxPeople: Any? = null
+    private val maxPeople: Int? = null
     @SerializedName("photos")
     @Expose
-    var photos: List<String>? = null
+    private val photos: List<String>? = null
 }

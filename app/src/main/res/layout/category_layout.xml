@@ -3,26 +3,27 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_marginStart="@dimen/object_margin_left"
     android:layout_height="wrap_content"
-    android:layout_marginTop="25dp">
+    android:layout_marginTop="25dp"
+    >
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/category_icon"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@mipmap/ic_museum" />
 
     <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/category_text"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:text="Музеи"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textSize="16sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_weight="1"
+            android:layout_gravity="center|start"
+            android:textSize="16sp"
+            android:layout_weight="100"/>
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
         android:layout_height="wrap_content" />
     <LinearLayout
         android:layout_width="wrap_content"

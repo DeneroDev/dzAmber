@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * Created by DENERO on 12.10.2017.
  */
-class CategoryId {
+class Category {
     @SerializedName("id")
     @Expose
     var id: Int? = null

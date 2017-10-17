@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:layout_marginTop="5dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:text="TITLE"
+    android:maxLines="2"
+    android:id="@+id/point_title">
+</TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="DESCR"
+        android:maxLines="2"
+        android:id="@+id/point_descr">
+    </TextView>
+</LinearLayout>

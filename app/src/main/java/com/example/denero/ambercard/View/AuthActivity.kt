@@ -49,13 +49,16 @@ class AuthActivity: AppCompatActivity() {
             }
 
             override fun onResponse(call: Call<Token>?, response: Response<Token>?) {
-                tokenR = response?.body()!!
+                if(response?.body()!=null)
+                {tokenR = response?.body()!!
                 Toast.makeText(applicationContext,tokenR.token+"\n"+"Все прекрасно",Toast.LENGTH_LONG).show()
-                saveToken(tokenR)
+               saveToken(tokenR)
                 Thread.sleep(1000)
                 var intent=Intent(this@AuthActivity,AllPointActivity::class.java)
                 startActivity(intent)
-                finish()
+                finish()}
+                else
+                    Toast.makeText(applicationContext,"Wrong Login/Password",Toast.LENGTH_LONG).show()
             }
         })}
     }

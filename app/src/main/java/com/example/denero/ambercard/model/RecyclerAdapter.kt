@@ -3,20 +3,19 @@ package com.example.denero.ambercard.model
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.denero.ambercard.R
-import com.example.denero.ambercard.View.AllPointActivity
+import com.example.denero.ambercard.Repository.POJO.NPagePOJO
 import com.example.denero.ambercard.View.PlaceActivity
 
 
 /**
  * Created by DENERO on 17.10.2017.
  */
-class RecyclerAdapter(dataset:NPagePOJO,context: Context): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter(dataset: NPagePOJO, context: Context): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     private var mDataset: NPagePOJO
     private var mContext = context
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {

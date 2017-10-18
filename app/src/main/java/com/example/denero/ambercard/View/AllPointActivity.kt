@@ -1,17 +1,15 @@
 package com.example.denero.ambercard.View
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.widget.Toast
 import com.example.denero.ambercard.R
-import com.example.denero.ambercard.Server.Server
-import com.example.denero.ambercard.model.NPagePOJO
+import com.example.denero.ambercard.Repository.Server
+import com.example.denero.ambercard.Repository.POJO.NPagePOJO
 import com.example.denero.ambercard.model.RecyclerAdapter
 import retrofit2.Call
 import retrofit2.Callback
@@ -24,7 +22,7 @@ class AllPointActivity: AppCompatActivity() {
     lateinit var recyclerView:RecyclerView
     lateinit var mAdapter: RecyclerView.Adapter<*>
     lateinit var layoutManager:RecyclerView.LayoutManager
-    lateinit var myDataset:NPagePOJO
+    lateinit var myDataset: NPagePOJO
     var server = Server()
     val TOKEN_PREF = "token"
     var flag:Boolean = false

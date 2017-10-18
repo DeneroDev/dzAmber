@@ -1,5 +1,7 @@
-package com.example.denero.ambercard.Server
+package com.example.denero.ambercard.Repository
 
+import com.example.denero.ambercard.Repository.POJO.NPagePOJO
+import com.example.denero.ambercard.Repository.POJO.PagePOJO
 import com.example.denero.ambercard.model.*
 import retrofit2.Call
 import retrofit2.http.*
@@ -13,7 +15,7 @@ interface ServerAPI {
 
 
     @POST("/api/1/login")
-    fun authorizationUser(@Body regisBody: RegisBody):Call<Any>
+    fun authorizationUser(@Body regisBody: RegisBody):Call<Token>
 
 
 }

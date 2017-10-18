@@ -2,9 +2,7 @@ package com.example.denero.ambercard.View
 
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.graphics.Typeface
-import android.opengl.Visibility
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
@@ -14,17 +12,15 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.denero.ambercard.R
-import com.example.denero.ambercard.Server.Server
+import com.example.denero.ambercard.Repository.Server
 import com.example.denero.ambercard.model.JsonGet
-import com.example.denero.ambercard.model.NPagePOJO
-import com.example.denero.ambercard.model.PagePOJO
+import com.example.denero.ambercard.Repository.POJO.PagePOJO
 import com.example.denero.ambercard.model.Views
 import com.google.gson.GsonBuilder
 import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.io.Serializable
 import java.util.*
 
 
@@ -41,7 +37,7 @@ class PlaceActivity() : AppCompatActivity() {
     lateinit var picture:String
     lateinit var name:String
    // private val page = server.jsonAdapter.fromJson(jsonGet.jsonTwo)
-    private lateinit var page:PagePOJO /*gson.fromJson<PagePOJO>(jsonGet.jsonTwo, PagePOJO::class.java)*/
+    private lateinit var page: PagePOJO /*gson.fromJson<PagePOJO>(jsonGet.jsonTwo, PagePOJO::class.java)*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_place)

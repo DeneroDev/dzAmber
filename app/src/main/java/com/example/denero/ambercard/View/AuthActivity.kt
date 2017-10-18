@@ -22,7 +22,7 @@ import retrofit2.Response
 class AuthActivity: AppCompatActivity() {
     private val server = Server()
     private val views = Views()
-    private var regisBody = RegisBody()
+
     val TOKEN_PREF = "token"
 
     private var tokenR = Token()
@@ -39,9 +39,9 @@ class AuthActivity: AppCompatActivity() {
     }
 
     fun authUser(v: View){
-        if(regisBody.username==""&&regisBody.password=="")
-        {regisBody.username = views.userLogin.text.toString()
-        regisBody.password = views.userPassword.text.toString()
+        var regisBody = RegisBody(views.userLogin.text.toString(),views.userPassword.text.toString())
+        if(regisBody.username!=""&&regisBody.password!="")
+        {
         val call: Call<Token> = server.req.authorizationUser(regisBody)
         call.enqueue(object:Callback<Token>{
             override fun onFailure(call: Call<Token>?, t: Throwable?) {

@@ -32,14 +32,16 @@ class AuthActivity: AppCompatActivity() {
         views.setViewsAuthActivity(this)
         views.userLogin.setText("boris")
         views.userPassword.setText("XXX666xxx")
-        regisBody.username = views.userLogin.text.toString()
-        regisBody.password = views.userPassword.text.toString()
+
 
 
 
     }
 
     fun authUser(v: View){
+        if(regisBody.username==""&&regisBody.password=="")
+        {regisBody.username = views.userLogin.text.toString()
+        regisBody.password = views.userPassword.text.toString()
         val call: Call<Token> = server.req.authorizationUser(regisBody)
         call.enqueue(object:Callback<Token>{
             override fun onFailure(call: Call<Token>?, t: Throwable?) {
@@ -55,7 +57,7 @@ class AuthActivity: AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-        })
+        })}
     }
 
     fun saveToken(tokenR:Token){
